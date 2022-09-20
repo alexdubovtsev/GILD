@@ -527,12 +527,16 @@ export function tabs() {
 }
 
 // todo Menu-burger
-export function menuInit() {
+export function burgerMenu() {
+	const iconMenu = document.querySelector('.menu__burger');
+    const iconBody = document.querySelector('.menu__body');
 	if (document.querySelector(".icon-burger")) {
 		document.addEventListener("click", function (e) {
 			if (bodyLockStatus && e.target.closest('.icon-burger')) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
+				iconMenu.classList.toggle('_burger-active');
+            	iconBody.classList.toggle('_burger-active');
                 // 1 lvl
                 if (document.documentElement.classList.contains('_catalog-active')) {
 					document.documentElement.classList.remove('_catalog-active');

@@ -18,7 +18,7 @@ functions.isWebp();
 // functions.fullVHfix();
 
 /* Module Burger-menu */
-// functions.burgerMenu();
+functions.burgerMenu();
 
 /* Module Spollers */
 // functions.spollers();
@@ -123,7 +123,7 @@ import * as scroll from "./modules/scroll/scroll.js";
 // todo My code
 
 /* Dynamic adaptive */
-// import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 /* Number formatting */
 // import './libs/wNumb.min.js';
