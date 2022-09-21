@@ -1,4 +1,4 @@
-import { isMobile, FLS } from "../files/functions.js";
+import { isMobile, FLS } from "../modules/functions.js";
 import { modules } from "../modules/modules.js";
 
 /*

@@ -75,7 +75,7 @@ Plugin documentation: https://refreshless.com/nouislider/ */
 /* Form module "Tippy" */
 /* Configures: js/modules/tippy.js
 Plugin documentation: https://atomiks.github.io/tippyjs/ */
-// import "./modules/tippy.js";
+import "./modules/tippy.js";
 
 
 // todo Slider (Swiper)

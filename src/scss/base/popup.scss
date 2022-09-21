@@ -56,6 +56,9 @@ body::after {
 	max-width: 500px;
 	border-radius: 20px;
 	position: relative;
+	@media (max-width:$mobile){
+		max-width: 300px;
+	}
 	.lock & {
 		visibility: visible;
 	}
@@ -72,4 +75,6 @@ body::after {
 
 .popup__text {
 	color: $text-dark;
+	font-size: rem(16);
+	font-weight: 600;
 }
