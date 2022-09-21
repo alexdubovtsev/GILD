@@ -7,7 +7,7 @@
 	}
 }
 .top-header {
-	padding: rem(10) 0;
+	padding: rem(10) 0; 
 	@media (max-width:$tablet){
 		position: fixed;
 		width: 100%;
@@ -20,6 +20,7 @@
 		align-items: center;
 		min-height: rem(50);
 		gap: rem(30);
+
 	}
 
 	// .top-header__menu
@@ -60,6 +61,9 @@
 				}
 			}
 		}
+		@media (max-width:$tablet){
+			display: none;
+		}
 	}
 
 	// .top-header__line
@@ -71,7 +75,7 @@
 		border-radius: rem(4);
 		height: 100%;
 		@media (max-width:$tablet){
-			//display: none;
+			display: none;
 		}
 	}
 
@@ -220,4 +224,6 @@
 	}
 
 }
+
+
 

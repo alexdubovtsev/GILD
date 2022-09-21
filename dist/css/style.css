@@ -271,12 +271,22 @@ body {
     color: #f3cd82;
   }
 }
+@media (max-width: 61.99875em) {
+  .top-header__favourite {
+    display: none;
+  }
+}
 .top-header__line {
   display: flex;
   align-items: center;
   border: 0.0625rem solid #f3cd82;
   border-radius: 0.25rem;
   height: 100%;
+}
+@media (max-width: 61.99875em) {
+  .top-header__line {
+    display: none;
+  }
 }
 .top-header__view-all {
   white-space: nowrap;
