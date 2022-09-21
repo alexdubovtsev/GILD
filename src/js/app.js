@@ -30,7 +30,7 @@ functions.burgerMenu();
 // functions.tabs();
 
 /* Module Popups */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /* Module Mouse parallax */
 // import './libs/parallax-mouse.js'
@@ -129,5 +129,6 @@ import "./libs/dynamic_adapt.js";
 // import './libs/wNumb.min.js';
 
 import "./modules/script.js"; 
+
 
 
