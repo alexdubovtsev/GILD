@@ -1,25 +1,30 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
 
-.button {
+.btn {
 	padding: rem(8) rem(52);
     display: inline-flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-	border-radius: rem(3);
 
-	background-color: #333;
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.35);
+	background: url("../img/btn-bg.png") center / cover no-repeat;
 
-	font-weight: 600;
-	font-size: rem(20);
-	color: #fff;
-	line-height: math.div(32, 20);
-	transition: box-shadow 0.3s ease 0s;
-	@media (any-hover: hover) {
-		&:hover {
-			box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+	font-weight: 700;
+	@include adaptiveValue("font-size", 20, 14);
+	color: #3c3c3c;
+	line-height: math.div(23 , 20);
+	transition: all 0.3s ease 0s;
+	//border-bottom: rem(3) solid $text-dark;
+	border-radius: rem(76);
+	box-shadow: 0 rem(3) 0 $text-dark;
+	position: relative;
+	top: 0;
+	@media (any-hover: hover){
+		&:hover{
+			top: rem(1);
+			box-shadow: 0 rem(2) 0 $text-dark;
+			transition: all 0.3s ease 0s;
 		}
 	}
 	&_black {
