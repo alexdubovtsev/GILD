@@ -27,7 +27,7 @@ functions.spollers();
 // functions.showMore();
 
 /* Module Tabs */
-// functions.tabs();
+functions.tabs();
 
 /* Module Popups */
 import './libs/popup.js'

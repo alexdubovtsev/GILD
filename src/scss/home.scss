@@ -262,5 +262,29 @@
     }
 }
 
+// ! EXAMPLES block ==============================================================
 
+.examples-block {
+    @include adaptiveValue("padding-top", 50, 20, 992, 320, 1);
+    @include adaptiveValue("padding-bottom", 50, 20, 992, 320, 1);
+    // .examples-block__container
+    &__container {
+    }
 
+    // .examples-block__title
+    &__title {
+    }
+
+    // .examples-block__gallery
+    &__gallery {
+        @include adaptiveValue("margin-bottom", 50, 25);
+    }
+
+    // .examples-block__footer
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("row-gap", 30, 15, 992, 320, 1);
+        align-items: center;
+    }
+}
