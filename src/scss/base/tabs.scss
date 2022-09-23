@@ -38,18 +38,23 @@
 		box-shadow: 0 rem(5) rem(20) rgba(0, 0, 0, 0.1);
 		padding: rem(10) rem(15);
 		border-radius: rem(4);
+		@media (max-width:$mobileSmall){
+			 padding: 0; 
+			 box-shadow: none;
+		}
 	}
 	// .gallery-examples__body
 	&__body {
-		@media (max-width:$tablet){
-			padding: rem(20) rem(10);
-		}
+		._tab-spoller & {
+            padding: rem(20) rem(5);
+			&:not(:last-child) {margin-bottom: rem(10);}
+        }
 	}
 	// .gallery-examples__inner
 	&__inner {
 		color: $text-dark;
 		display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
         @include adaptiveValue("gap", 20, 15);
 	}
 }
@@ -60,7 +65,6 @@
 	// .body-product-card__navigation
 	&__navigation {
 		display: flex;
-		//justify-content: space-between;
 		@include adaptiveValue("margin-bottom", 15, 10, 992, 320,1);
 	}
 

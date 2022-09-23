@@ -14,6 +14,7 @@
 	font-weight: 600;
 	outline: 0;
 	transition-property: transform, visibility, opacity;
+	z-index: -1;
 }
 .tippy-box[data-placement^="top"] > .tippy-arrow {
 	bottom: 0;
