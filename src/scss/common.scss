@@ -32,10 +32,10 @@
         border-radius: rem(4);
         transition: all 0.3s ease 0s;
         font-weight: 500;
+        @include adaptiveValue("font-size", 16, 14, 992, 320, 1);
         @media (any-hover: hover){
             &:hover{
                 background-color: #FFF0D2;
-                //background: linear-gradient(180deg, $color-yellow, #ddb15c);
             }
         }
     }
@@ -45,10 +45,17 @@
         display: flex;
         gap: rem(12);
         align-items: center;
+
     }
 
     // .pagging__item
     &__item {
+        @media (max-width: em(570)){
+            &:nth-child(6), &:nth-child(7), &:nth-child(8) {display: none;} 
+        }
+        @media (max-width: em(390)){
+            &:nth-child(4), &:nth-child(5) {display: none;} 
+        }
     }
     // .pagging__link
     &__link {
