@@ -2,55 +2,115 @@
 // Сниппет (HTML): spoller
 
 // Блок со спойлерами
-.spollers {
+.spoller-elements-block {
+	//padding: rem(10) 0;
 	display: grid;
-	gap: 15px;
+	gap: rem(10);
+	max-width: rem(300);
+	background: url("../img/main-page/elements/list-bg.png") 0 0 / cover no-repeat;
+	border-radius: rem(4);
+	box-shadow: 0 rem(5) rem(20) rgba(0, 0, 0, 0.1);
+	padding: rem(10) 0;
+	@media (max-width:$mobile){
+		max-width: 100%;
+	}
+
 }
 // Спойлер
-.spollers__item {
-	font-size: rem(20);
+.spoller-elements-block__item {
+	backdrop-filter: blur(rem(2));
+	padding: rem(10) rem(10) rem(10) rem(25);
+	@media (max-width:$tablet){
+		&:not(:last-child) {
+			border-bottom: rem(1) solid rgba($color: $text-dark, $alpha: .15);
+		}
+	}
+
+
 }
 // Заголовок спойлера
-.spollers__title {
-	width: 100%;
+.spoller-elements-block__title {
+	color: $text-dark;
+	font-weight: 600;
+	@include adaptiveValue("font-size", 14, 12, 767, 320, 1);
+	line-height: 1.12;
 	cursor: default;
+	//cursor: pointer;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
+	padding: rem(5) 0;
 	position: relative;
+	border-bottom: rem(2) solid transparent;
+	transition: all 0.3s ease 0s;
+	position: relative;
+	@media (any-hover: hover){
+		.spoller-elements-block__item:hover & {
+			border-bottom: rem(2) solid $color-yellow;
+		}
+	}
+	@media (max-width:$mobile){
+		padding-right: rem(20); 
+	}
 	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
-		}
+		width: 100%;
 		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
+			content: "\e902";
+			@extend %ic;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: rem(10);
+			transition: transform 0.5s ease 0s;
+			padding: rem(5);
 		}
 		&._spoller-active {
 			&::before {
-				transform: translateX(-75%) rotate(-40deg);
+				transform: translateY(-50%) rotateX(180deg);
 			}
-			&::after {
-				transform: rotate(40deg);
-			}
+
 		}
 	}
 }
 // Контент спойлера
-.spollers__body {
-	padding: rem(20);
+.spoller-elements-block__body {
+	padding: rem(10);
 	border-radius: rem(5);
-	border: 1px solid #eee;
+	border-top: 1px solid rgba($color: $color-yellow, $alpha: .5);
+	@media (min-width:$mobile){
+		 display: none; 
+	}
+}
+
+.spoller-elements-block__list {
+
+}
+
+.spoller-elements-block__li {
+	color: $text-dark;
+	font-size: rem(14);
+	line-height: 1.12;
+	font-weight: 500;
+	padding-left: rem(14);
+	&:not(:last-child) {
+		margin-bottom: rem(8);
+	}
+	position: relative;
+		&::before,&::after{
+			content:'';
+			position: absolute;
+			border-radius: 50%;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%, -50%);
+		}
+		&::after{
+			width: rem(4);
+			height: rem(4);
+			background-color: $text-light;
+		}
+		&::before{
+			width: rem(8);
+			height: rem(8);
+			background-color: $color-yellow;
+		}
 }

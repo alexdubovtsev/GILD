@@ -21,7 +21,7 @@ functions.isWebp();
 functions.burgerMenu();
 
 /* Module Spollers */
-// functions.spollers();
+functions.spollers();
 
 /* Module Show More */
 // functions.showMore();

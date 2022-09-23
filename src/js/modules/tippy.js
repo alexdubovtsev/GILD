@@ -1,3 +1,4 @@
+//Plugin documentation: https://atomiks.github.io/tippyjs/
 import { isMobile, FLS } from "./functions.js";
 // Подключение списка активных модулей
 import { modules } from "./modules.js";

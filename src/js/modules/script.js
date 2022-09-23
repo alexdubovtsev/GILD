@@ -80,10 +80,10 @@ if (animItems.length > 0) {
    
 }
 
-// if (document.querySelector('.filter-catalog__title')) {
-// 	document.querySelector('.filter-catalog__title').addEventListener("click", function (e) {
-// 		if (window.innerWidth < 992) {
-// 			document.querySelector('.filter-catalog__items').classList.toggle('_active');
+// if (document.querySelector('.elements-block__title-btn')) {
+// 	document.querySelector('.elements-block__title-btn').addEventListener("click", function (e) {
+// 		if (window.innerWidth < 767) {
+// 			document.querySelector('.spoller-elements-block').classList.toggle('_active');
 // 		}
 // 	});
 // }

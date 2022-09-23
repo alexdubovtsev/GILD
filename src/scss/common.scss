@@ -1,0 +1,19 @@
+.title {
+    max-width: rem(750);
+    margin: 0 auto;
+    text-align: center;
+    @include adaptiveValue("font-size", 48, 25);
+    line-height: 1.1;
+    font-weight: 700;
+    color: $text-dark;
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 50, 25);
+    }
+    transform: translateX(-150%);
+    opacity: 0; 
+    &._active{
+        transform: translateX(0);
+        opacity: 1; 
+        transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
+    }
+}

@@ -119,12 +119,17 @@ body {
 
 .page {
 	// ! HOME ------------------------------------------
-	// .page_home
-	&_home {
+	// .page__home
+	&__home {
 	}
-    // .page__main-block
+    // .page__interesting-block
     &__main-block {
         position: relative;
+    }
+	// .page__elements-block
+    &__elements-block {
+        position: relative;
+		//background-color: #999;
     }
 
 	// ! Catalog ------------------------------------------
