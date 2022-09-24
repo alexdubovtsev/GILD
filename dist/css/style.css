@@ -1857,6 +1857,32 @@ body::after {
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.15s;
 }
 
+.footer {
+  background: linear-gradient(180deg, rgba(35, 34, 39, 0.8) -2.11%, #000000 97.89%);
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__desc {
+  display: grid;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.footer__item {
+  position: relative;
+}
+@supports (padding: clamp( 0.625rem , -0.3947368421rem  +  1.6447368421vw , 1.25rem )) {
+  .footer__item {
+    padding: clamp( 0.625rem , -0.3947368421rem  +  1.6447368421vw , 1.25rem );
+  }
+}
+@supports not (padding: clamp( 0.625rem , -0.3947368421rem  +  1.6447368421vw , 1.25rem )) {
+  .footer__item {
+    padding: calc(0.625rem + 0.625 * (100vw - 62rem) / 38);
+  }
+}
 .elements-block {
   position: relative;
 }

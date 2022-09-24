@@ -1,3 +1,116 @@
-//====================================================================================================
 
-//====================================================================================================
+.footer {
+
+    background: linear-gradient(180deg, rgba(35, 34, 39, 0.8) -2.11%, #000000 97.89%);
+    // .footer__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // @media (max-width:$mobileSmall){
+		// 	justify-content: center; 
+		// }
+    }
+
+    // .footer__desc
+    &__desc {
+        display: grid;
+        align-items: center;
+        
+        gap: rem(15);
+    }
+
+    // .footer__logo
+    &__logo {
+    }
+
+    // .footer__copy
+    &__copy {
+    }
+
+    // .footer__item
+    &__item {
+		@include adaptiveValue("padding", 20, 10, 1600, 992,1);
+		position: relative;
+		// @media (min-width:$tablet){
+		// 	min-height: rem(136);
+		// }
+    }
+
+    // .footer__socials
+    &__socials {
+    }
+}
+.footer-links {
+
+    // .footer-links__link
+    &__link {
+    }
+
+    // .footer-links__img
+    &__img {
+    }
+
+    // .footer-links__text
+    &__text {
+    }
+}
+.footer-msg {
+
+    // .footer-msg__text
+    &__text {
+    }
+
+    // .footer-msg__line
+    &__line {
+    }
+
+    // .footer-msg__viber
+    &__viber {
+    }
+
+    // .footer-msg__whatsapp
+    &__whatsapp {
+    }
+
+    // .footer-msg__vk
+    &__vk {
+    }
+
+    // .footer-msg__inst
+    &__inst {
+    }
+}
+
+.footer-location {
+
+    // .footer-location__text
+    &__text {
+    }
+
+    // .footer-location__line
+    &__line {
+    }
+
+    // .footer-location__map
+    &__map {
+    }
+
+    // .footer-location__icon
+    &__icon {
+    }
+
+    // .footer-location__callback
+    &__callback {
+    }
+}
+.footer-phones {
+
+    // .footer-phones__shedule
+    &__shedule {
+    }
+
+    // .footer-phones__phone
+    &__phone {
+    }
+}
