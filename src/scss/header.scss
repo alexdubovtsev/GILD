@@ -578,10 +578,10 @@
 	// .header-actions-phones__callback
 	&__callback {
 		color: $text-light;
-		justify-self: end;
 		line-height: 1.12;
 		font-weight: 600;
 		padding: rem(3);
+		justify-self: end;
 		@media (any-hover: hover){
 			&:hover{
 				text-decoration: underline;
