@@ -307,8 +307,139 @@
     }
 }
 
+// ! KITCHEN_ORDERS block ==============================================================
 
 
+.kitchen-orders {
+    @include adaptiveValue("padding-top", 50, 20, 992, 320, 1);
+    @include adaptiveValue("padding-bottom", 50, 20, 992, 320, 1);
+    position: relative;
+    background-color: #FAF9F7;
+    // .kitchen-orders__container
+    &__container {
+        position: relative;
+    }
+
+    // .kitchen-orders__bg-1
+    &__bg-1 {
+        position: absolute;
+        bottom: prc(70, 1100);
+        right: 0;
+        //z-index: -1;
+    }
+
+    // .kitchen-orders__bg-2
+    &__bg-2 {
+        position: absolute;
+        top: prc(250, 1100);
+        left: 0;
+        //z-index: -1;
+    }
+
+    // .kitchen-orders__title
+    &__title {
+    }
+
+    // .kitchen-orders__items
+    &__items {
+        display: grid;
+        @include adaptiveValue("row-gap", 20, 10, 992, 320, 1);
+        height: 100%;
+    }
+
+    // .kitchen-orders__row
+    &__row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(rem(252), auto);
+        @include adaptiveValue("column-gap", 20, 10, 992, 320, 1);
+        height: 100%;
+    }
+
+    // .kitchen-orders__item
+    &__item {
+        
+    }
+}
+
+.item-kitchen-orders {
+    position: relative;
+    overflow: hidden;
+    border-radius: rem(8);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    // .item-kitchen-orders__img
+    &__img-ibg {
+        filter: brightness(0.95);
+        transition: all 0.3s ease 0s;
+        position: relative;
+        min-height: 100%;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        @media (any-hover: hover){
+            .item-kitchen-orders:hover:hover &{
+                filter: brightness(0.6);
+            }
+        }
+    }
+
+    // .item-kitchen-orders__label
+    &__label {
+        position: absolute;
+        width: 100%;
+        height: 12%;
+        // bottom: 10%;
+        // left: 10%;
+        bottom: 0;
+        left: 0;
+        padding: rem(5) rem(15);
+        background-color: rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(25 , 20);
+        color: $text-light;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            .item-kitchen-orders:hover:hover &{
+                color: $color-yellow;
+            }
+        }
+    }
+
+    // .item-kitchen-orders__catalog
+    &__catalog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: rem(5);
+        @include adaptiveValue("font-size", 18, 14);
+        line-height: math.div(25 , 20);
+        color: $text-light;
+        letter-spacing: 0.02em;
+        transition: all 0.3s ease 0s;
+        opacity: 0;
+        visibility: hidden;
+        @media (any-hover: hover){
+            &:hover {
+                text-decoration: underline;
+            }
+            .item-kitchen-orders:hover:hover &{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+// ! WORKS block ==============================================================
 
 .works-block {
     @media (min-width:$tablet){
