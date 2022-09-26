@@ -122,17 +122,18 @@ body {
 	// .page__home
 	&__home {
 	}
-    // .page__interesting-block
-    &__main-block {
-        position: relative;
+	// .page__interesting-block
+    &__interesting-block {
     }
 	// .page__elements-block
     &__elements-block {
         position: relative;
-		//background-color: #999;
     }
     // .page__examples-block
     &__examples-block {
+    }
+    // .page__10min-info-block
+    &__tenmin-info-block {
     }
 	// .page__kitchen-orders-block
     &__kitchen-orders-block {

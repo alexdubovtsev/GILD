@@ -2,7 +2,7 @@
     max-width: rem(750);
     margin: 0 auto;
     text-align: center;
-    @include adaptiveValue("font-size", 48, 25);
+    @include adaptiveValue("font-size", 48, 25, 992, 320, 1);
     line-height: 1.1;
     font-weight: 700;
     color: $text-dark;
@@ -186,6 +186,9 @@
         background: rgba(72, 72, 72, 0.71);
         backdrop-filter: blur(2px);
         transition: all 0.3s ease 0s;
+        &.ttu{
+           text-transform: uppercase; 
+        }
     }
 
     // .product-card__more

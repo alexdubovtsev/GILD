@@ -683,14 +683,14 @@ body::after {
   transform: translateX(-150%);
   opacity: 0;
 }
-@supports (font-size: clamp( 1.5625rem , 1.2113549618rem  +  1.7557251908vw , 3rem )) {
+@supports (font-size: clamp( 1.5625rem , 0.8779761905rem  +  3.4226190476vw , 3rem )) {
   .title {
-    font-size: clamp( 1.5625rem , 1.2113549618rem  +  1.7557251908vw , 3rem );
+    font-size: clamp( 1.5625rem , 0.8779761905rem  +  3.4226190476vw , 3rem );
   }
 }
-@supports not (font-size: clamp( 1.5625rem , 1.2113549618rem  +  1.7557251908vw , 3rem )) {
+@supports not (font-size: clamp( 1.5625rem , 0.8779761905rem  +  3.4226190476vw , 3rem )) {
   .title {
-    font-size: calc(1.5625rem + 1.4375 * (100vw - 20rem) / 81.875);
+    font-size: calc(1.5625rem + 1.4375 * (100vw - 20rem) / 42);
   }
 }
 @supports (margin-bottom: clamp( 1.5625rem , 1.1808206107rem  +  1.9083969466vw , 3.125rem )) {
@@ -879,6 +879,9 @@ body::after {
   background: rgba(72, 72, 72, 0.71);
   backdrop-filter: blur(2px);
   transition: all 0.3s ease 0s;
+}
+.product-card__label.ttu {
+  text-transform: uppercase;
 }
 .product-card__more {
   position: absolute;
@@ -2663,6 +2666,149 @@ body::after {
   }
 }
 
+.tenmin-info-block {
+  background: url("../img/main-page/tenmin-info/tenmin-info-bg.png") 0 0/cover no-repeat;
+}
+@supports (padding-top: clamp( 1.25rem , 0.3571428571rem  +  4.4642857143vw , 3.125rem )) {
+  .tenmin-info-block {
+    padding-top: clamp( 1.25rem , 0.3571428571rem  +  4.4642857143vw , 3.125rem );
+  }
+}
+@supports not (padding-top: clamp( 1.25rem , 0.3571428571rem  +  4.4642857143vw , 3.125rem )) {
+  .tenmin-info-block {
+    padding-top: calc(1.25rem + 1.875 * (100vw - 20rem) / 42);
+  }
+}
+@supports (padding-bottom: clamp( 1.25rem , 0.3571428571rem  +  4.4642857143vw , 3.125rem )) {
+  .tenmin-info-block {
+    padding-bottom: clamp( 1.25rem , 0.3571428571rem  +  4.4642857143vw , 3.125rem );
+  }
+}
+@supports not (padding-bottom: clamp( 1.25rem , 0.3571428571rem  +  4.4642857143vw , 3.125rem )) {
+  .tenmin-info-block {
+    padding-bottom: calc(1.25rem + 1.875 * (100vw - 20rem) / 42);
+  }
+}
+.tenmin-info-block__title {
+  color: #FFF5E0;
+  max-width: 82.0833333333%;
+  text-align: left;
+}
+@supports (font-size: clamp( 1.25rem , 0.9375rem  +  1.5625vw , 2.5rem )) {
+  .tenmin-info-block__title {
+    font-size: clamp( 1.25rem , 0.9375rem  +  1.5625vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.25rem , 0.9375rem  +  1.5625vw , 2.5rem )) {
+  .tenmin-info-block__title {
+    font-size: calc(1.25rem + 1.25 * (100vw - 20rem) / 80);
+  }
+}
+@media (max-width: 47.99875em) {
+  .tenmin-info-block__title {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+.tenmin-info-block__row {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+}
+@media (max-width: 47.99875em) {
+  .tenmin-info-block__row {
+    display: grid;
+    gap: 1.25rem;
+  }
+}
+.tenmin-info-block__list {
+  flex: 1 1 auto;
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.35s;
+  transform: translateX(-200%);
+  opacity: 0;
+  visibility: hidden;
+}
+.tenmin-info-block__row._active .tenmin-info-block__list {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+.tenmin-info-block__item {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.625rem;
+  align-items: center;
+}
+@media (max-width: 61.99875em) {
+  .tenmin-info-block__item {
+    grid-template-columns: 5rem 1fr;
+  }
+}
+.tenmin-info-block__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 61.99875em) {
+  .tenmin-info-block__img img {
+    transform: scale(66.6666666667%);
+  }
+}
+.tenmin-info-block__text {
+  line-height: 1.3181818182;
+}
+@supports (font-size: clamp( 1rem , 0.880952381rem  +  0.5952380952vw , 1.25rem )) {
+  .tenmin-info-block__text {
+    font-size: clamp( 1rem , 0.880952381rem  +  0.5952380952vw , 1.25rem );
+  }
+}
+@supports not (font-size: clamp( 1rem , 0.880952381rem  +  0.5952380952vw , 1.25rem )) {
+  .tenmin-info-block__text {
+    font-size: calc(1rem + 0.25 * (100vw - 20rem) / 42);
+  }
+}
+.tenmin-info-block__body {
+  flex: 0 0 57.5%;
+  display: grid;
+  gap: 0.625rem;
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.55s;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+}
+.tenmin-info-block__row._active .tenmin-info-block__body {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.tenmin-info-block__video {
+  padding-bottom: 55.3623188406%;
+  position: relative;
+  z-index: 2;
+}
+.tenmin-info-block__video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.tenmin-info-block__tip {
+  line-height: 1.25;
+  color: #f3cd82;
+}
+@supports (font-size: clamp( 0.875rem , 0.7855145414rem  +  0.4474272931vw , 1rem )) {
+  .tenmin-info-block__tip {
+    font-size: clamp( 0.875rem , 0.7855145414rem  +  0.4474272931vw , 1rem );
+  }
+}
+@supports not (font-size: clamp( 0.875rem , 0.7855145414rem  +  0.4474272931vw , 1rem )) {
+  .tenmin-info-block__tip {
+    font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 27.9375);
+  }
+}
+
 .kitchen-orders {
   position: relative;
   background-color: #FAF9F7;
@@ -2931,9 +3077,6 @@ body::after {
   margin: 0 auto;
 }
 
-.page__main-block {
-  position: relative;
-}
 .page__elements-block {
   position: relative;
 }

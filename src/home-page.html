@@ -5,11 +5,74 @@
     <div class="wrapper">
         <!-- @@include('html/_header.html', {}) -->
         <main class="page page__home">
+          
           <section  class="page__interesting-block interesting-block">
             <div class="interesting-block__container">
-              <div class="interesting-block__left">
 
+              <div class="interesting-block__left">
+                <h2 class="interesting-block__title title"></h2>
+
+                <div class="interesting-block__col-1">
+                  <article class="product-card">
+                    <a href="#" class="product-card__img-ibg">
+                      <img src="@img/main-page/interesting/catalog-kithcen-1.png" alt="Kitchen examples">
+                      <div class="product-card__label ttu">Примеры проектов с ценами</div>
+                    </a>
+                  </article>
+                  <article class="product-card">
+                    <a href="#" class="product-card__img-ibg">
+                      <img src="@img/main-page/interesting/catalog-kithcen-2.png" alt="Kitchen catalog">
+                      <div class="product-card__label ttu">Каталог кухонь</div>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="interesting-block__col-2">
+                  <article class="product-card">
+                    <a href="#" class="product-card__img-ibg">
+                      <img src="@img/main-page/interesting/catalog-materials.png" alt="Materials catalog">
+                      <div class="product-card__label ttu">Каталог материалов</div>
+                    </a>
+                  </article>
+                  <article class="product-card">
+                    <a href="#" class="product-card__img-ibg">
+                      <img src="@img/main-page/interesting/kitchen-elements.png" alt="Kitchen elements">
+                      <div class="product-card__label ttu">Элементы кухни</div>
+                    </a>
+                  </article>
+                  <article class="product-card">
+                    <a href="#" class="product-card__img-ibg">
+                      <img src="@img/main-page/interesting/kitchen-construct.png" alt="Kitchen construct">
+                      <div class="product-card__label ttu">Конструктор кухонь</div>
+                    </a>
+                  </article>
+                </div>
               </div>
+
+              <div class="interesting-block__right">
+                <article class="product-card">
+                  <a href="#" class="product-card__img-ibg">
+                    <img src="@img/main-page/interesting/order.png" alt="Kitchen order">
+                    <div class="product-card__label ttu">Как заказать кухню</div>
+                  </a>
+                </article>
+                <article class="product-card">
+                  <a href="#" class="product-card__img-ibg">
+                    <img src="@img/main-page/interesting/sales.png" alt="Kitchen sales">
+                  </a>
+                </article>
+                <article class="product-card">
+                  <a href="#" class="product-card__img-ibg">
+                    <picture>
+                      <source media="(min-width: 992px)" srcset="@img/main-page/interesting/calc-1.png" />
+                      <source media="(max-width: 992px)" srcset="@img/main-page/interesting/calc-2.png" />
+                      <img src="@img/main-page/interesting/calc-1.png" alt="Kitchen cal">
+                    </picture>
+                    <div class="product-card__label ttu">калькулятор цены кухонь</div>
+                  </a>
+                </article>
+              </div>
+
             </div>
           </section>
 
@@ -1749,7 +1812,41 @@
             </div>
           </section>
 
-          <section class="page__kitchen-orders-block kitchen-orders">
+          <section hidden class="page__tenmin-info-block tenmin-info-block">
+            <div class="tenmin-info-block__container">
+              <h2 class="tenmin-info-block__title title _anim-items">Как за 10 минут узнать о кухнях больше, чем от многочасовых походов в магазин</h2>
+              <div class="tenmin-info-block__row _anim-items _anim-stop">
+                <ul class="tenmin-info-block__list">
+                  <li class="tenmin-info-block__item">
+                    <div class="tenmin-info-block__img">
+                      <img src="@img/main-page/tenmin-info/img-1.png" alt="Calc">
+                    </div>
+                    <div class="tenmin-info-block__text">Как формируется итоговая стоимость?</div>
+                  </li>
+                  <li class="tenmin-info-block__item">
+                    <div class="tenmin-info-block__img">
+                      <img src="@img/main-page/tenmin-info/img-2.png" alt="Piggy bank">
+                    </div>
+                    <div class="tenmin-info-block__text">Как сэкономить не теряя в качестве и надежности?</div>
+                  </li>
+                  <li class="tenmin-info-block__item">
+                    <div class="tenmin-info-block__img">
+                      <img src="@img/main-page/tenmin-info/img-3.png" alt="Ruler">
+                    </div>
+                    <div class="tenmin-info-block__text">Почему цена кухонь одного размера могут отличаться?</div>
+                  </li>
+                </ul>
+                <div class="tenmin-info-block__body">
+                  <div class="tenmin-info-block__video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xSETaLiHTHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="tenmin-info-block__tip">Нажмите, чтобы посмотреть видео и узнать ответы на вопросы</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section hidden class="page__kitchen-orders-block kitchen-orders">
             <img class="kitchen-orders__bg-1" src="@img/main-page/kitchen-orders/bg-1.png" alt="#">
             <img class="kitchen-orders__bg-2" src="@img/main-page/kitchen-orders/bg-2.png" alt="#">
             <div class="kitchen-orders__container">

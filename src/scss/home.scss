@@ -1,8 +1,34 @@
 
-
-
 // ! ELEMENTS block ==============================================================
 
+.interesting-block {
+
+    // .interesting-block__container
+    &__container {
+    }
+
+    // .interesting-block__left
+    &__left {
+    }
+
+    // .interesting-block__title
+    &__title {
+    }
+
+    // .interesting-block__col-1
+    &__col-1 {
+    }
+
+    // .interesting-block__col-2
+    &__col-2 {
+    }
+
+    // .interesting-block__right
+    &__right {
+    }
+}
+
+// ! ELEMENTS block ==============================================================
 
 .elements-block {
     @include adaptiveValue("padding-top", 50, 20, 992, 320, 1);
@@ -307,8 +333,122 @@
     }
 }
 
-// ! KITCHEN_ORDERS block ==============================================================
+// ! 10 min INFO block ==============================================================
 
+.tenmin-info-block {
+    @include adaptiveValue("padding-top", 50, 20, 992, 320, 1);
+    @include adaptiveValue("padding-bottom", 50, 20, 992, 320, 1);
+    background: url("../img/main-page/tenmin-info/tenmin-info-bg.png") 0 0 / cover no-repeat;
+    // .10min-info-block__container
+    &__container {
+    }
+
+    // .10min-info-block__title
+    &__title {
+        color: #FFF5E0;
+        max-width: prc(985, 1200);
+        text-align: left;
+        @include adaptiveValue("font-size", 40, 20, 1600, 320, 1);
+        @media (max-width:$mobile){
+             text-align: center; 
+             max-width: 100%;
+        }
+    }
+
+    // .10min-info-block__row
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: rem(30);
+        @media (max-width:$mobile){
+             display: grid; 
+             gap: rem(20);
+        }
+    }
+
+    // .10min-info-block__list
+    &__list {
+        flex: 1 1 auto;
+        transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0.35s;
+        transform: translateX(-200%);
+        opacity: 0;
+        visibility: hidden;
+        .tenmin-info-block__row._active & {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    // .10min-info-block__item
+    &__item {
+        display: grid;
+        grid-template-columns: rem(120) 1fr;
+        gap: rem(10);
+        align-items: center;
+        @media (max-width:$tablet){
+            grid-template-columns: rem(80) 1fr;
+        }
+    }
+
+    // .10min-info-block__img
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width:$tablet){
+            img {
+                transform: scale(prc(80, 120));
+            }
+        }
+    }
+
+    // .10min-info-block__text
+    &__text {
+        line-height: math.div(29 , 22);
+        @include adaptiveValue("font-size", 20, 16, 992, 320, 1);
+        //flex: 1 1 auto;
+    }
+
+    // .tenmin-info-block__body
+    &__body {
+        flex: 0 0 prc(690, 1200);
+        display: grid;
+        gap: rem(10);
+        transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0.55s;
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+        .tenmin-info-block__row._active & {
+            transform: scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    // .10min-info-block__video
+    &__video {
+        padding-bottom: prc(382, 690);
+        position: relative;
+        z-index: 2;
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    // .10min-info-block__tip
+    &__tip {
+        @include adaptiveValue("font-size", 16, 14, 767, 320, 1);
+        line-height: math.div(20 , 16);
+        color: $color-yellow;
+    }
+}
+
+// ! KITCHEN_ORDERS block ==============================================================
 
 .kitchen-orders {
     @include adaptiveValue("padding-top", 50, 20, 992, 320, 1);
