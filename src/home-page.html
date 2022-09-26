@@ -3,7 +3,7 @@
   @@include('html/_head.html', { "title": "About" })
   <body>
     <div class="wrapper">
-        @@include('html/_header.html', {})
+        <!-- @@include('html/_header.html', {}) -->
         <main class="page page__home">
           <section  class="page__interesting-block interesting-block">
             <div class="interesting-block__container">
@@ -1754,7 +1754,8 @@
             <img class="kitchen-orders__bg-2" src="@img/main-page/kitchen-orders/bg-2.png" alt="#">
             <div class="kitchen-orders__container">
               <h2 class="kitchen-orders__title title _anim-items">Кухни на заказ</h2>
-              <div class="kitchen-orders__items">
+              <div class="kitchen-orders__items _anim-items _anim-stop">
+
                 <div class="kitchen-orders__row">
 
                   <div class="kitchen-orders__item item-kitchen-orders">
@@ -1775,17 +1776,72 @@
 
                   <div class="kitchen-orders__item item-kitchen-orders big-img">
                     <div class="item-kitchen-orders__img-ibg">
-                      <img src="@img/main-page/kitchen-orders//modern.jpg" alt="Kitchen modern">
+                      <img src="@img/main-page/kitchen-orders/modern.jpg" alt="Kitchen modern">
                     </div>
                     <div class="item-kitchen-orders__label">Современные кухни</div>
                     <a href="#" class="item-kitchen-orders__catalog">Перейти в каталог</a>
                   </div>
 
                 </div>
+
+                <div class="kitchen-orders__row">
+
+                  <div class="kitchen-orders__item item-kitchen-orders big-img">
+                    <div class="item-kitchen-orders__img-ibg">
+                      <img src="@img/main-page/kitchen-orders/classic.jpg" alt="Kitchen classic">
+                    </div>
+                    <div class="item-kitchen-orders__label">Классические кухни</div>
+                    <a href="#" class="item-kitchen-orders__catalog">Перейти в каталог</a>
+                  </div>
+
+                  <div class="kitchen-orders__item item-kitchen-orders">
+                    <div class="item-kitchen-orders__img-ibg">
+                      <img src="@img/main-page/kitchen-orders/white.jpg" alt="Kitchen white">
+                    </div>
+                    <div class="item-kitchen-orders__label">Белые кухни</div>
+                    <a href="#" class="item-kitchen-orders__catalog">Перейти в каталог</a>
+                  </div>
+
+                  <div class="kitchen-orders__item item-kitchen-orders">
+                    <div class="item-kitchen-orders__img-ibg">
+                      <img src="@img/main-page/kitchen-orders/hrushevka.jpg" alt="Kitchen hrushevka">
+                    </div>
+                    <div class="item-kitchen-orders__label">Кухни в хрущевку</div>
+                    <a href="#" class="item-kitchen-orders__catalog">Перейти в каталог</a>
+                  </div>
+
+                </div>
+
+                <div class="kitchen-orders__row">
+
+                  <div class="kitchen-orders__item item-kitchen-orders">
+                    <div class="item-kitchen-orders__img-ibg">
+                      <img src="@img/main-page/kitchen-orders/small.jpg" alt="Kitchen small">
+                    </div>
+                    <div class="item-kitchen-orders__label">Маленькие кухни</div>
+                    <a href="#" class="item-kitchen-orders__catalog">Перейти в каталог</a>
+                  </div>
+
+                  <div class="kitchen-orders__item item-kitchen-orders big-img">
+                    <div class="item-kitchen-orders__img-ibg">
+                      <img src="@img/main-page/kitchen-orders/corner.jpg" alt="Kitchen corner">
+                    </div>
+                    <div class="item-kitchen-orders__label">Угловые кухни</div>
+                    <a href="#" class="item-kitchen-orders__catalog">Перейти в каталог</a>
+                  </div>
+
+                  <div class="kitchen-orders__item item-kitchen-orders">
+                    <div class="item-kitchen-orders__img-ibg">
+                      <img src="@img/main-page/kitchen-orders/straight.jpg" alt="Kitchen straight">
+                    </div>
+                    <div class="item-kitchen-orders__label">Прямые кухни</div>
+                    <a href="#" class="item-kitchen-orders__catalog">Перейти в каталог</a>
+                  </div>
+
+                </div>
+
               </div>
             </div>
-
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
           </section>
 
           <section hidden class="page__works-block works-block">
