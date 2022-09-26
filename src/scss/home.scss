@@ -306,3 +306,41 @@
         align-items: center;
     }
 }
+
+
+
+
+.works-block {
+    @media (min-width:$tablet){
+        background: url("../img/main-page/works/works-bg.png") 0 0 / cover no-repeat; 
+    }
+    @include adaptiveValue("padding-top", 50, 20, 992, 320, 1);
+    @include adaptiveValue("padding-bottom", 50, 20, 992, 320, 1);
+    // .works-block__container
+    &__container {
+        display: grid;
+        align-items: center;
+    }
+
+    // .works-block__title
+    &__title {
+        color: $text-dark;
+    }
+
+    // .works-block__gallery
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+        @include adaptiveValue("gap", 20, 15);
+        padding: rem(10);
+        background-color: rgba($color: #fff, $alpha: .25);
+        border-radius: rem(4);
+        &:not(:last-child) {@include adaptiveValue("margin-bottom", 65, 30, 992, 320, 1);}
+    }
+
+    // .works-block__more
+    &__more {
+        margin: 0 auto;
+    }
+}
+

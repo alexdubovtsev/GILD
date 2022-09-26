@@ -18,6 +18,22 @@
     }
 }
 
+.btn-more {
+    color: $text-dark;
+    font-weight: 500;
+    padding: rem(11) rem(25);
+    border: rem(1) solid $color-yellow;
+    border-radius: rem(4);
+    transition: all 0.3s ease 0s;
+    background-color: #fff;
+    @include adaptiveValue("font-size", 16, 14, 992, 320, 1);
+    @media (any-hover: hover){
+        &:hover{
+            background-color: #FFF0D2;
+        }
+    }
+}
+
 .pagging {
     display: flex;
     justify-content: flex-end;
@@ -25,19 +41,7 @@
     @include adaptiveValue("gap", 30, 15);
     // .pagging__more
     &__more {
-        color: $text-dark;
-        font-weight: 500;
-        padding: rem(11) rem(25);
-        border: rem(1) solid $color-yellow;
-        border-radius: rem(4);
-        transition: all 0.3s ease 0s;
-        font-weight: 500;
-        @include adaptiveValue("font-size", 16, 14, 992, 320, 1);
-        @media (any-hover: hover){
-            &:hover{
-                background-color: #FFF0D2;
-            }
-        }
+
     }
 
     // .pagging__list
@@ -110,6 +114,9 @@
     height: 100%;
     grid-auto-flow: row;
     grid-template-rows: auto 1fr;
+    position: relative;
+    overflow: hidden;
+    border-radius: rem(8);
     @media (any-hover: hover){
         &:hover{
             .product-card__label {
@@ -124,10 +131,13 @@
     &__img-ibg {
         position: relative;
         padding-bottom: prc(337,388);
-        border-radius: rem(8);
+
         overflow: hidden;
         img {transition: all 0.3s ease 0s;}
         &:not(:last-child) {margin-bottom: rem(10);}
+        .works-block__gallery & {
+            margin: 0;
+        }
     }
 
     // .product-card__label
@@ -153,6 +163,31 @@
         transition: all 0.3s ease 0s;
     }
 
+    // .product-card__more
+    &__more {
+        position: absolute;
+        padding: rem(15) rem(15) rem(15) rem(5);
+        width: 100%;
+        font-size: rem(14);
+        text-transform: uppercase;
+        color: $color-yellow;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background: rgba(72, 72, 72, 0.71);
+        backdrop-filter: blur(0.511871px);
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .product-card:hover & {
+            transition: all 0.3s ease 0s;
+            opacity: 1;
+        }
+    }
 	// .product-card__body
 	&__body {
 	}
