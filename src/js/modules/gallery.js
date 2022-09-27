@@ -10,8 +10,9 @@ import lightGallery from 'lightgallery';
 
 // Плагины
 // lgZoom, lgAutoplay, lgComment, lgFullscreen, lgHash, lgPager, lgRotate, lgShare, lgThumbnail, lgVideo, lgMediumZoom
-// import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js'
-// import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js'
+//import lgThumbnail from 'lightgallery/plugins/thumbnail/lg-thumbnail.min.js';
+//import lgMediumZoom from 'lightgallery/plugins/lg-medium-zoom.min.js';
+//import lgZoom from 'lightgallery/plugins/zoom/lg-zoom.min.js';
 
 const galleries = document.querySelectorAll('[data-gallery]');
 if (galleries.length) {
@@ -20,7 +21,7 @@ if (galleries.length) {
 		galleyItems.push({
 			gallery,
 			galleryClass: lightGallery(gallery, {
-				// plugins: [lgZoom],
+				//plugins: [lgZoom, lgMediumZoom],
 				licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
 				speed: 500,
 			})

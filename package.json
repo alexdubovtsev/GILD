@@ -54,7 +54,7 @@
     "html-webpack-plugin": "^5.5.0",
     "inputmask": "latest",
     "js-datepicker": "^5.18.0",
-    "lightgallery": "latest",
+    "lightgallery": "^2.6.1",
     "load-plugins": "latest",
     "mini-css-extract-plugin": "^2.4.7",
     "nouislider": "latest",

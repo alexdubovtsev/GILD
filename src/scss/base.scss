@@ -44,11 +44,11 @@
 // @import '@scss/libs/gallery/lg-share.scss';
 // @import '@scss/libs/gallery/lg-comments.scss';s
 // @import '@scss/libs/gallery/lg-rotate.scss';
-// @import '@scss/libs/gallery/lg-medium-zoom.scss';
+// @import './libs/gallery/lg-medium-zoom.scss';
 // @import '@scss/libs/gallery/lg-transitions.scss';
 // @import '@scss/libs/gallery/lg-relative-caption.scss';
 // Все стили
-// import '@scss/libs/gallery/lightgallery-bundle.scss';
+@import './libs/gallery/lightgallery-bundle.scss';
 
 // *Стили для Tippy
 // Подключение cтилей из src/scss/libs
