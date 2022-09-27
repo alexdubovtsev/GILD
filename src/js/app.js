@@ -118,7 +118,7 @@ import * as scroll from "./modules/scroll/scroll.js";
 // todo Gallery (lightgalleryjs.com)
 
 // Plugin documentation: https://www.lightgalleryjs.com/docs/ */
-// import "./modules/gallery.js";
+import "./modules/gallery.js";
 
 // todo My code
 

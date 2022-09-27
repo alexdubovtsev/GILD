@@ -2,29 +2,92 @@
 // ! ELEMENTS block ==============================================================
 
 .interesting-block {
-
+    @include adaptiveValue("padding-top", 50, 20, 992, 320, 1);
+    @include adaptiveValue("padding-bottom", 50, 20, 992, 320, 1);
     // .interesting-block__container
     &__container {
+        display: flex;
+        gap: rem(18);
+        @media (max-width:$tablet){
+            display: grid;
+        }
     }
 
     // .interesting-block__left
     &__left {
+        flex: 0 0 50%;
+        display: grid;
+        gap: rem(18);
     }
 
     // .interesting-block__title
     &__title {
+        &:not(:last-child) {
+           @include adaptiveValue("margin-bottom", 35, 20);
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .interesting-block__left-columns
+    &__left-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(18);
+        @media (max-width:$tablet){
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     // .interesting-block__col-1
     &__col-1 {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        gap: rem(18);
+        opacity: 0;
+        visibility: hidden;
+        &._active{
+            transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     // .interesting-block__col-2
     &__col-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: rem(18);
+        opacity: 0;
+        visibility: hidden;
+        &._active{
+            transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0.4s;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
     // .interesting-block__right
     &__right {
+        flex: 0 0 50%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
+        gap: rem(18);
+        opacity: 0;
+        visibility: hidden;
+        &._active{
+            transition: all 0.5s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0.2s;
+            opacity: 1;
+            visibility: visible;
+        }
+        @media (max-width:$mobileSmall){
+             display: flex;
+             flex-direction: column; 
+        }
+
     }
 }
 
