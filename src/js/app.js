@@ -47,7 +47,7 @@ forms.formFieldsInit({
 /* Form module submit */
 //? send: data-ajax / data-dev / data-goto-error / data-popup-message="#popup" 
 //? validation: data-required(="email") or data-validate + data-error="Error"
-// forms.formSubmit();
+forms.formSubmit();
 
 /* Form module "Quantity" */
 // forms.formQuantity();
@@ -56,7 +56,7 @@ forms.formFieldsInit({
 // forms.formRating();
 
 /* Form module "Select" */
-// import './libs/select.js'
+import './libs/select.js'
 
 /* Form module "Calendar" */
 //? Add data-datepicker
@@ -70,7 +70,7 @@ Plugin documentation: https://github.com/RobinHerbots/inputmask */
 /* Модуль работы с ползунком */
 /* Configures: js/modules/forms/range.js
 Plugin documentation: https://refreshless.com/nouislider/ */
-// import "./modules/forms/range.js";
+import "./modules/forms/range.js";
 
 /* Form module "Tippy" */
 /* Configures: js/modules/tippy.js

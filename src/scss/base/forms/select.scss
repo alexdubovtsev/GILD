@@ -8,13 +8,11 @@
 	}
 	// .select__title
 	&__title {
-		color: inherit;
+		color: $color-green;
 		text-align: left;
-		border: rem(1) solid #d9d9d9;
 		background-color: #fff;
 		cursor: pointer;
 		width: 100%;
-		border-radius: rem(4);
 	}
 	// .select__value
 	&__value {
@@ -28,8 +26,12 @@
 		}
 		&:after {
 			content: "";
+			@extend %ic;
+			content: "\e902";
+			color: $color-green;
 			align-self: stretch;
 			flex: 0 0 10px;
+			font-size: rem(10);
 			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;

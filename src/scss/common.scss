@@ -18,21 +18,7 @@
     }
 }
 
-.btn-more {
-    color: $text-dark;
-    font-weight: 500;
-    padding: rem(11) rem(25);
-    border: rem(1) solid $color-yellow;
-    border-radius: rem(4);
-    transition: all 0.3s ease 0s;
-    background-color: #fff;
-    @include adaptiveValue("font-size", 16, 14, 992, 320, 1);
-    @media (any-hover: hover){
-        &:hover{
-            background-color: #FFF0D2;
-        }
-    }
-}
+
 
 .big-img {
     @media (min-width:$mobileSmall){
@@ -282,4 +268,143 @@
 	// .product-card__body
 	&__body {
 	}
+}
+
+
+.kitchen-card {
+    position: relative;
+    display: grid;
+    height: 100%;
+    // grid-auto-flow: row;
+    // grid-template-rows: auto 1fr;
+    position: relative;
+    overflow: hidden;
+    border-radius: rem(8);
+    @media (any-hover: hover){
+        &:hover{
+            .kitchen-card__info {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    // .kitchen-card__img-ibg
+    &__img-ibg {
+        position: relative;
+        padding-bottom: prc(245, 282);
+    }
+    // .kitchen-card__label
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: 400;
+        font-size: rem(16);
+        line-height: math.div(20 , 16);
+        position: absolute;
+        padding: rem(15) rem(5);
+        width: 100%;
+        //height: prc(55,340);
+        height: auto;
+        bottom: 0;
+        left: 0;
+        color: $text-light;
+        filter: drop-shadow(0px 5.49122px 5.49122px rgba(0, 0, 0, 0.25));
+        background: rgba(72, 72, 72, 0.71);
+        backdrop-filter: blur(2px);
+        transition: all 0.3s ease 0s;
+    }
+    // .kitchen-card__info
+    &__info {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.info-kitchen-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(10);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(100% 131.64% at 1.23% 100%, rgba(29, 33, 34, 0.77) 0%, rgba(44, 42, 50, 0.77) 100%);
+
+    // .info-kitchen-card__title
+    &__title {
+        @include adaptiveValue("font-size", 20, 16);
+        line-height: math.div(24 , 20);
+        color: $text-light;
+        text-align: center;
+        &:not(:last-child) {margin-bottom: rem(13);}
+    }
+
+    // .info-kitchen-card__order
+    &__order {
+        font-size: rem(14);
+        line-height: 1.2;
+        color: $text-light;
+        text-align: center;
+        font-weight: 400;
+        padding: rem(5) 0;
+        border-bottom: rem(1) solid transparent;
+        transition: all 0.3s ease 0s;
+        &:not(:last-child) {margin-bottom: rem(45);}
+        @media (any-hover: hover){
+            &:hover{
+                border-bottom: rem(1) solid $text-light;
+            }
+        }
+    }
+
+    // .info-kitchen-card__button
+    &__button {
+        font-size: rem(15);
+        line-height: 1.1;
+        text-align: center;
+        letter-spacing: 0.02em;
+        background: linear-gradient(180deg, #ecd19a 0%, #daad54 100%);
+        border-radius: rem(25);
+        padding: rem(10) rem(25);
+        color: $text-light;
+        &:not(:last-child) {margin-bottom: rem(20);}
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                color: $color-blue;
+            }
+        }
+    }
+
+    // .info-kitchen-card__more
+    &__more {
+        color: $text-light;
+        display: inline-flex;
+        flex-direction: row-reverse;
+        padding: rem(8) rem(15);
+        border: rem(1) solid transparent;
+        border-radius: rem(15);
+        transition: all 0.3s ease 0s;
+        &::before{
+            font-size: rem(10);
+            margin-left: rem(10);
+            transform: rotate(-90deg) translateX(0);  
+            transition: all 0.3s ease 0s;            
+        }
+        @media (any-hover: hover){
+            &:hover{
+                border: rem(1) solid $text-light;
+                &::before{
+                    transform: rotate(-90deg) translateY(20%);                    
+                }
+            }
+        }
+
+    }
 }
