@@ -335,7 +335,9 @@
     top: 0;
     left: 0;
     background: radial-gradient(100% 131.64% at 1.23% 100%, rgba(29, 33, 34, 0.77) 0%, rgba(44, 42, 50, 0.77) 100%);
-
+    @media (max-width:$tablet){
+        justify-content: center;
+    }
     // .info-kitchen-card__title
     &__title {
         @include adaptiveValue("font-size", 20, 16);

@@ -38,7 +38,10 @@
         align-items: center;
         height: rem(35);
         @media (max-width:$pc){
-            grid-template-columns: rem(150) repeat(2, 1fr);
+            grid-template-columns: rem(150) 1fr;
+        }
+        @media (max-width: em(500)){
+             display: block; 
         }
     }
 
@@ -61,9 +64,6 @@
     }
 }
 
-.filter-catalog {
-}
-
 .control-catalog {
     font-size: rem(14);
     color: $text-dark;
@@ -73,6 +73,9 @@
     &:not(:last-child) {margin-bottom: rem(20);}
     // .control-catalog__quantity
     &__quantity {
+        @media (max-width: em(500)){
+             &:not(:last-child) {margin-bottom: rem(5);} 
+        }
         span {
             color: $color-green;
             margin-left: rem(5);
@@ -90,6 +93,9 @@
         &-select {
             width: 100%;
         }
+        @media (max-width:$pc){
+            justify-self: end; 
+        }
     }
 
     // .control-catalog__show
@@ -102,6 +108,9 @@
         }
         &-select {
             
+        }
+        @media (max-width:$pc){
+            display: none; 
         }
     }
 
@@ -139,6 +148,9 @@
     border-radius: rem(4);
     // .filter-catalog__top
     &__top {
+        @media (max-width:$tablet){
+            display: none;
+        }
     }
 
     // .filter-catalog__title
@@ -150,11 +162,10 @@
         line-height: math.div(20 , 18);
         letter-spacing: 0.02em;
         background: linear-gradient(180deg, #ecd19a 0%, #daad54 100%);
-        padding: rem(15) rem(15);
-        // @media (max-width: $tablet){
-        //     height: rem(50);
-        //     padding: 0 rem(20);
-        // }
+        padding: rem(15);
+        @media (max-width: em(345)){
+             padding: rem(10) rem(5); 
+        }
     }
 
     // .filter-catalog__items
@@ -195,6 +206,12 @@
         text-align: center;
         border-radius: rem(20);
         &:not(:last-child) {margin-bottom: rem(10);}
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover){
+            &:hover{
+                border: rem(1) solid $color-green;
+            }
+        }
     }
 
     // .top-filter-catalog__row
