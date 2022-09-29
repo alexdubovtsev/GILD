@@ -6,14 +6,14 @@
         @@include('html/_header.html', {})
         <main class="page page__home">
 
-          <section hidden class="page__interesting-block interesting-block">
+          <section class="page__interesting-block interesting-block">
             <div class="interesting-block__container">
               <div class="interesting-block__left">
                 <h2 class="interesting-block__title title _anim-items">Что вам может быть интересно?</h2>
                 <div class="interesting-block__left-columns">
                   <div class="interesting-block__col-1 _anim-items _anim-stop">
                     <article class="product-card_interesting">
-                      <a href="#" class="product-card__img-ibg big-img">
+                      <a data-goto=".page__examples-block" href="#" class="product-card__img-ibg big-img">
                         <img src="@img/main-page/interesting/catalog-kitchen-1.png" alt="Kitchen examples">
                         <div class="product-card__label ttu">Примеры проектов с ценами</div>
                       </a>
@@ -34,7 +34,7 @@
                       </a>
                     </article>
                     <article class="product-card_interesting">
-                      <a href="#" class="product-card__img-ibg">
+                      <a data-goto=".page__elements-block" href="#" class="product-card__img-ibg">
                         <img src="@img/main-page/interesting/kitchen-elements.png" alt="Kitchen elements">
                         <div class="product-card__label ttu">Элементы кухни</div>
                       </a>
@@ -52,7 +52,7 @@
 
               <div class="interesting-block__right _anim-items _anim-stop">
                 <article class="product-card_interesting">
-                  <a href="#" class="product-card__img-ibg">
+                  <a data-goto=".page__kitchen-orders-block" href="#" class="product-card__img-ibg">
                     <img src="@img/main-page/interesting/order.png" alt="Kitchen order">
                     <div class="product-card__label ttu">Как заказать кухню</div>
                   </a>
@@ -70,7 +70,7 @@
                 </article> 
 
                 <article class="product-card_interesting">
-                  <a href="#" class="product-card__img-ibg big-img">
+                  <a data-goto=".page__works-block" href="#" class="product-card__img-ibg big-img">
                     <img src="@img/main-page/interesting/info.png" alt="Kitchen info">
                     <div class="product-card__label ttu">Информация о компании</div>
                   </a>
@@ -79,7 +79,7 @@
             </div>
           </section>
 
-          <section hidden class="page__elements-block elements-block">
+          <section class="page__elements-block elements-block">
             <img class="elements-block__lamp _anim-items _anim-stop" src="@img/main-page/elements/lamp.png" alt="Lamp">
 
             <div class="elements-block__container">
@@ -233,7 +233,7 @@
             </div>
           </section>
 
-          <section  class="page__examples-block examples-block">
+          <section class="page__examples-block examples-block">
             <img class="examples-block__shelf" src="@img/main-page/examples/shelf.png" alt="Shelf">
             <img class="examples-block__chair" src="@img/main-page/examples/chair.png" alt="Chair">
             <div class="examples-block__container">
@@ -1815,7 +1815,7 @@
             </div>
           </section>
 
-          <section hidden class="page__tenmin-info-block tenmin-info-block">
+          <section class="page__tenmin-info-block tenmin-info-block">
             <div class="tenmin-info-block__container">
               <h2 class="tenmin-info-block__title title _anim-items">Как за 10 минут узнать о кухнях больше, чем от многочасовых походов в магазин</h2>
               <div class="tenmin-info-block__row _anim-items _anim-stop">
@@ -1849,7 +1849,7 @@
             </div>
           </section>
 
-          <section hidden class="page__guarantee-block guarantee-block _anim-items _anim-stop">
+          <section class="page__guarantee-block guarantee-block _anim-items _anim-stop">
             <div class="guarantee-block__container">
               <h2 class="guarantee-block__title title _anim-items">Даем тройную гарантию защиты качества, сроков и лучшей стоимости</h2>
               <div class="guarantee-block__row">
@@ -1924,7 +1924,7 @@
             </div>
           </section>
 
-          <section  class="page__kitchen-orders-block kitchen-orders">
+          <section class="page__kitchen-orders-block kitchen-orders">
             <img class="kitchen-orders__bg-1" src="@img/main-page/kitchen-orders/bg-1.png" alt="#">
             <img class="kitchen-orders__bg-2" src="@img/main-page/kitchen-orders/bg-2.png" alt="#">
             <div class="kitchen-orders__container">
@@ -2019,7 +2019,7 @@
             </div>
           </section>
 
-          <section hidden class="page__works-block works-block">
+          <section class="page__works-block works-block">
             <div class="works-block__container">
               <h2 class="works-block__title title _anim-items">Наши работы</h2>
               <div class="works-block__gallery">

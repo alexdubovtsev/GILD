@@ -106,7 +106,7 @@ Plugin documentation: https://github.com/verlok/vanilla-lazyload */
 import * as scroll from "./modules/scroll/scroll.js";
 
 // Smooth page navigation
-// scroll.pageNavigation();
+scroll.pageNavigation();
 
 // Adding classes to the header on scroll
 // scroll.headerScroll();
